@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function play(){
+		var rigthAnswer = Math.floor(Math.random() * (100) + 1);
+		var tryCount = 0;
+		while(true){
+			tryCount++;
+			var userAnswer = prompt('Введите число от 1 до 100. Для выхода нажмите q');
+			if(userAnswer == 'q')
+				break;
+
+			userAnswer = parseInt(userAnswer);
+
+			if( (rigthAnswer >= 1) && (rigthAnswer <= 100) ){
+
+				if(rigthAnswer == userAnswer){
+					alert('Вы угадали! Поздравляю!!!');
+				} else if( rigthAnswer > userAnswer){
+					alert('Не угадали. Ваше число меньше загаданного! Порпобуйте ешё раз.');
+				} else {
+					alert('Не угадли. Ваше число больше загаданного! Порпобуйте ещё раз.');
+				}
+			} else {
+				alert('Ну я же просил, ввести число от 1 до 100!!! Поробуйте ещё разок!');
+			}
+
+		}
+
+		alert('Игра окончена! Тебе потребовалось ' + tryCount + ' попыток');
+	}
+
+
+</script>>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Игра угадайка</a></li>
+			<li><a href="guess2.html">Угадайка мультиплеер</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра угадайка</h2>
+	</div>
+	<div id="content">
+		
+		<h3>Угадай число!</h3>  
+
+		<p>Я загадл число 1 до 100. Порпобуй угадать!<p/>
+		
+
+		<input type="button" value="Начать игру!" onClick="play()"/>
+
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
